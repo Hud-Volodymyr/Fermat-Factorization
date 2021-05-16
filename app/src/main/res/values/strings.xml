@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fermat Factorization</string>
+    <string name="title_home">Fermat</string>
+    <string name="enter_number">Enter number to factorize</string>
+</resources>
