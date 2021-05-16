@@ -26,7 +26,7 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val numberView: EditText = findViewById(R.id.numberEdx)
+        val numberView: EditText = findViewById(R.id.number)
         val textView: TextView = findViewById(R.id.result)
         numberView.addTextChangedListener {
             if (it.toString().isBlank()) {
