@@ -59,9 +59,11 @@ open class MainActivity : AppCompatActivity() {
 
     private fun factorize(number: Long) : List<Long> {
         if (number <= 0) error("Cannot factorize non-positive numbers")
+        val start = System.currentTimeMillis()
         var root = ceil(sqrt(number.toFloat())).toLong()
         if (root * root == number) return listOf(root, root)
         while (root != (number + 1) / 2) {
+            if (System.currentTimeMillis() - start < 3000) error("Time limit exceeded")
             val r = root * root - number
             val perfectSqrt = isPerfectSquare(r)
             if (perfectSqrt != -1L) {
